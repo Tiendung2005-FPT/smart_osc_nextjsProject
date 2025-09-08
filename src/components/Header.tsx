@@ -1,7 +1,12 @@
+"use client"
+
+import { useRouter } from "next/navigation"
+
 export default function Header() {
+    const router = useRouter();
     return (
-        <header className="header-container flex justify-between px-25 bg-linear-to-r from-[#2C3E50] to-[#4A648F] text-white">
-            <div className="header-brand flex justify-center items-center gap-3 cursor-pointer">
+        <header className="header-container flex justify-between px-25 bg-linear-to-r from-[#2C3E50] to-[#4A648F] text-white lg:flex-row flex-col">
+            <div className="header-brand flex justify-center items-center gap-3 cursor-pointer" onClick={() => router.push('/')}>
                 <div className="header-brand-icon-wrapper">
                     <i className="bi bi-book-half header-brand-icon text-[3rem] text-[#FF6B6B]"></i>
                 </div>
